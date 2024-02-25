@@ -1,0 +1,17 @@
+Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+============ RESTART: /home/walters/src/class2/week1/assignment1.py ============
+Part 1
+Enter name: Sean Walters
+Enter age: 61
+Sean Walters you will turn 100 in the year 2063 (if your birthday is passed)
+Part 2
+Common between the list  (without duplicates): [1, 2, 3, 5, 8, 13]
+Part 3
+Enter long string containing multiple words: My name is Michele
+String reversed: Michele is name My
+Part 4
+First Last : [5, 25]
+Part 5
+Modified String: AJrpan
