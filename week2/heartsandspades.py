@@ -6,46 +6,41 @@ Created on Thu Feb 22 16:31:38 2024
 """
 
 import random
-
-def generate_random_number():
-    """Generates a random 4-digit number with non-repeating digits."""
-    return random.sample(range(10), 4)
-
-def evaluate_guess(secret_number, user_guess):
-    """Evaluates the user's guess and returns the number of hearts and spades."""
+def evaluate_guess(random_number, user_guess):
     hearts = 0
     spades = 0
     for i in range(4):
-        if user_guess[i] == secret_number[i]:
+        if user_guess[i] == random_number[i]:
             hearts += 1
-        elif user_guess[i] in secret_number:
+        elif user_guess[i] in random_number:
             spades += 1
     return hearts, spades
 
 def main():
-    secret_number = generate_random_number()
-    num_guesses = 0
+    random_number = random.sample(range(10), 4)
+    print("Spoiler Alert  don't look  at number: "+ str(random_number))
+    guess_count = 0
 
-    print("Welcome to the Hearts and Spades game!")
-    print("Guess a 4-digit number (each digit should be unique).")
+    print("Hearts and Spades")
+    print("input 4 digits each should be unique:")
 
     while True:
-        user_input = input("Enter your guess: ")
+        input_digits = input("Your guess: ")
         try:
-            user_guess = [int(digit) for digit in user_input]
+            user_guess = [int(digit) for digit in input_digits]
             if len(user_guess) != 4 or len(set(user_guess)) != 4:
-                print("Invalid input. Please enter a 4-digit number with unique digits.")
+                print("Invalid input. Enter 4 unique digits. try will not count")
                 continue
         except ValueError:
-            print("Invalid input. Please enter a valid 4-digit number.")
+            print("Invalid Input. it will not count")
             continue
 
-        num_guesses += 1
-        hearts, spades = evaluate_guess(secret_number, user_guess)
-        print(f"Hearts: {hearts}, Spades: {spades}")
+        guess_count += 1
+        hearts, spades = evaluate_guess(random_number, user_guess)
+        print('Hearts:'+str(hearts)+' Spades: '+str(spades))
 
         if hearts == 4:
-            print(f"Congratulations! You guessed the correct number {secret_number} in {num_guesses} guesses.")
+            print('You guessed it in '+str(guess_count)+ ' trys')
             break
 
 if __name__ == "__main__":

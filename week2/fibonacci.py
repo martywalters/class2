@@ -5,7 +5,7 @@ Created on Thu Feb 22 16:33:59 2024
 @author: walters
 """
 
-def generate_fibonacci(n):
+def fib(n):
     """Generates the first n Fibonacci numbers using recursion."""
     if n <= 0:
         return []
@@ -14,7 +14,7 @@ def generate_fibonacci(n):
     elif n == 2:
         return [0, 1]
     else:
-        fib_sequence = generate_fibonacci(n - 1)
+        fib_sequence =fib(n - 1)
         next_number = fib_sequence[-1] + fib_sequence[-2]
         fib_sequence.append(next_number)
         return fib_sequence
@@ -25,9 +25,9 @@ def main():
         if num_terms <= 0:
             print("Please enter a positive integer.")
             return
-        fibonacci_numbers = generate_fibonacci(num_terms)
+        fibonacci_numbers = fib(num_terms)
         print(f"The first {num_terms} Fibonacci numbers are:")
-        print(fibonacci_numbers)
+        print(' '.join(str(x) for x in fibonacci_numbers))
     except ValueError:
         print("Invalid input. Please enter a valid positive integer.")
 

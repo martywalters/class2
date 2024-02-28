@@ -5,27 +5,24 @@ Created on Thu Feb 22 16:36:26 2024
 @author: walters
 """
 
-def is_prime(number):
-    """Checks if a given number is prime."""
-    if number <= 1:
+def is_prime(num):
+    if num <= 1:
         return False
-    for divisor in range(2, int(number**0.5) + 1):
-        if number % divisor == 0:
+    for divisor in range(2, int(num**0.5) + 1):
+        if num % divisor == 0:
             return False
     return True
 
+
 def main():
-    try:
-        user_input = int(input("Enter a positive integer: "))
-        if user_input <= 0:
-            print("Please enter a positive integer greater than 1.")
+        user_num = int(input("positive number: "))
+        if user_num <= 0:
+            print("positive")
             return
-        if is_prime(user_input):
-            print(f"{user_input} is a prime number.")
+        if is_prime(user_num):
+            print(str(user_num) +' is prime' )
         else:
-            print(f"{user_input} is not a prime number.")
-    except ValueError:
-        print("Invalid input. Please enter a valid positive integer.")
+            print(str(user_num) +' is not prime' )
 
 if __name__ == "__main__":
     main()
