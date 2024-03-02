@@ -20,16 +20,13 @@ def fib(n):
         return fib_sequence
 
 def main():
-    try:
-        num_terms = int(input("Enter the number of Fibonacci numbers to generate: "))
-        if num_terms <= 0:
-            print("Please enter a positive integer.")
-            return
-        fibonacci_numbers = fib(num_terms)
-        print(f"The first {num_terms} Fibonacci numbers are:")
-        print(' '.join(str(x) for x in fibonacci_numbers))
-    except ValueError:
-        print("Invalid input. Please enter a valid positive integer.")
+    num_items = int(input("Enter the number of Fibonacci numbers to generate: "))
+    if num_items <= 0:
+        print("Enter a positive integer.")
+        return
+    fib_numbers = fib(num_items) 
+    print('The first ' + str(num_items) + ' Fibonacci numbers  are:')
+    print(' '.join(str(x) for x in fib_numbers))
 
 if __name__ == "__main__":
     main()

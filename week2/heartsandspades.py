@@ -6,7 +6,7 @@ Created on Thu Feb 22 16:31:38 2024
 """
 
 import random
-def evaluate_guess(random_number, user_guess):
+def check_guess(random_number, user_guess):
     hearts = 0
     spades = 0
     for i in range(4):
@@ -36,7 +36,7 @@ def main():
             continue
 
         guess_count += 1
-        hearts, spades = evaluate_guess(random_number, user_guess)
+        hearts, spades = check_guess(random_number, user_guess)
         print('Hearts:'+str(hearts)+' Spades: '+str(spades))
 
         if hearts == 4:
