@@ -1,0 +1,26 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+========== RESTART: C:\Users\walters\src\class2\week3\assignment 3.py ==========
+Part 1:
+Enter a string: this is a test lower case string
+THIS IS A TEST LOWER CASE STRING
+Part 2:
+Addition: 20
+Subtraction: 10
+Multiplication: 20
+Division: 4.0
+Modulus Division: 0
+Part 3:
+Part 4:
+Number of lines in 'About_Python-1.txt': 7
+Total number of words in 'About_Python-1.txt': 102
+Part 5
+Reversed content written to reversed_output.txt
+>>> 
+============ RESTART: C:\Users\walters\src\class2\week3\test_calc.py ===========
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.005s
+
+OK

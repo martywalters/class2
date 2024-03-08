@@ -23,4 +23,4 @@ def count_lines_and_words(filename):
         print(f"File '{filename}' not found.")
 
 # Usage: Replace 'your_file.txt' with the actual file name
-count_lines_and_words('About_Python-1.txt')
+

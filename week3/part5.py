@@ -19,6 +19,4 @@ def reverse_file_content(input_file, output_file):
         print(f"File '{input_file}' not found. Please provide a valid input file.")
 
 # Example usage
-input_file_name = "About_Python-1.txt"
-output_file_name = "reversed_output.txt"
-reverse_file_content(input_file_name, output_file_name)
+
