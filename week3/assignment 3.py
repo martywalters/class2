@@ -1,8 +1,10 @@
 print('Part 1:')
 from part1 import StringModify
 
-user_string = StringModify()
-user_string.get_String()
+user_string = StringModify("this is a test string")
+
+#String entered by the user as an argument "value".
+print(user_string.value)
 user_string.print_String()
 
 print('Part 2:')
@@ -19,6 +21,7 @@ print("Modulus Division:", calc_obj.modulus_divide(10, 5))
 
 print('Part 3:')
 #see  test_calc.py and calc.py
+print('*** See Part 3 below : test_calc.py and calc.py ***')
 
 print('Part 4:')
 import part4
