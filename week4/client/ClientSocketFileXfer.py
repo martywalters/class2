@@ -7,10 +7,12 @@ BUFFER_SIZE = 4096          # send 4096 bytes each time step
 
 # the ip address or hostname of the server, the receiver
 host = "127.0.0.1"
+#host= "localhost"
+#host = socket.gethostbyname("WORKBOOK")
 # the port, let's use 5001
 port = 5001
 # the name of file we want to send, make sure it exists
-filename = "dogs"
+filename = "team_data.pkl"
 # get the file size
 filesize = os.path.getsize(filename)
 

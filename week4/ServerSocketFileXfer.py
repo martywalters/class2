@@ -3,6 +3,7 @@ import tqdm
 import os
 # device's IP address
 SERVER_HOST = ''
+#SERVER_HOST = socket.gethostbyname("WORKBOOK")
 SERVER_PORT = 5001
 # receive 4096 bytes each time
 BUFFER_SIZE = 4096
