@@ -33,8 +33,6 @@ def find_credit_card_numbers(text):
 # Example usage:
 #input_text = "My credit card number is 4111-1111-1111-1111. Please verify it."
 input_text = "Please use my credit card number. It is Visa #4111-1111-1111-1111  with an expiration date of 08/19/2030. The CVS number is 854."
-cd
-cd
 
 credit_card_numbers = find_credit_card_numbers(input_text)
 
