@@ -1,6 +1,8 @@
 import time
 import concurrent.futures
 
+
+
 # Define the five functions
 def add(x, y):
     time.sleep(1)
@@ -30,8 +32,12 @@ def func(secs):
 
 def run_synchronously():
     start_time = time.perf_counter()
+    global result_add
+    global result_subtract
+    global result_multiply
+    global result_divide
+    global result_modulus
 
-    # Call each function sequentially
     result_add = add(10, 5)
     result_subtract = subtract(20, 7)
     result_multiply = multiply(8, 4)
@@ -40,26 +46,38 @@ def run_synchronously():
 
     end_time = time.perf_counter()
     elapsed_time = end_time - start_time
-    print(f"Synchronous execution took {elapsed_time:.2f} seconds.")
+    print(f"Synchronous time took {elapsed_time:.2f} seconds.")
 
 def run_concurrently():
+    global add_result
+    global sub_result
+    global mult_result
+    global div_result
+    global mod_result
     start_time = time.perf_counter()
     with concurrent.futures.ThreadPoolExecutor() as exec:
-        add_result = exec.submit(add, 1 ,2)
-        sub_result = exec.submit(subtract,7,2)
-        mult_result = exec.submit(multiply(8, 4))
-        div_result = exec.submit(divide(30, 6))
-        mod_result = exec.submit(modulus(25, 7))
+        add_result = exec.submit(add, 10,5)
+        sub_result = exec.submit(subtract,20,7)
+        mult_result = exec.submit(multiply,8,4)
+        div_result = exec.submit(divide,30,6)
+        mod_result = exec.submit(modulus,25,7)
         
-
-    
-    #print(add_result.result())
     end_time = time.perf_counter()
     elapsed_time = end_time - start_time
 
-    print(f"Concurrent execution took {elapsed_time:.2f} seconds.")
+    print(f"Concurrent time took {elapsed_time:.2f} seconds.")
 
 if __name__ == "__main__":
+
+                    
     run_synchronously()
     run_concurrently()
+    print("\nResults:")
+    print(f"Addition:\t {result_add} (synchronous) vs {add_result.result()} (concurrent)")
+    print(f"Subtraction:\t {result_subtract} (synchronous) vs {sub_result.result()} (concurrent)")
+    print(f"Multiplication:\t {result_multiply} (synchronous) vs {mult_result.result()} (concurrent)")
+    print(f"Division:\t {result_divide} (synchronous) vs {div_result.result()} (concurrent)")
+    print(f"Modulus:\t {result_modulus} (synchronous) vs {mod_result.result()} (concurrent)")
+
+
 
