@@ -30,6 +30,7 @@ def unpickle_it(filename='team_data.pkl'):
         print(f"Error unpickling dictionary: {e}")
         return None
 def move_pickle():
+    print( "team_data.pkl  moved to client directory" )
     Path("team_data.pkl").rename("client/team_data.pkl")
     
 
