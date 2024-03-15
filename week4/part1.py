@@ -5,6 +5,7 @@ from functools import partial
 # Define the functions
 def add(x, y):
     time.sleep(1)
+    print('add')
     return x + y
 
 def subtract(x, y):
