@@ -13,10 +13,7 @@ def luhn_checksum(card_number):
 def validate_credit_card(card_number):
 
     card_number = card_number.replace(" ", "")  # Remove spaces
-    #if not re.match(r"^\d{11,19}$", card_number):
-    #    return False  # Invalid format (not a valid length or contains non-digits)
     check_digit = int(card_number[-1])
-    #print('check digit: ' + str(check_digit))
     calculated_check_digit = luhn_checksum(card_number[:-1])
     return check_digit == calculated_check_digit
 
