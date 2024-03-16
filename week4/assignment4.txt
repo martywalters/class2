@@ -1,0 +1,27 @@
+Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+=============== RESTART: /home/walters/src/class2/week4/part1.py ===============
+Synchronous time took 5.01 seconds.
+Concurrent time took 1.01 seconds.
+
+Results:
+Addition:	 15 (synchronous) vs 15 (concurrent)
+Subtraction:	 13 (synchronous) vs 13 (concurrent)
+Multiplication:	 32 (synchronous) vs 32 (concurrent)
+Division:	 5.0 (synchronous) vs 5.0 (concurrent)
+Modulus:	 4 (synchronous) vs 4 (concurrent)
+>>> 
+=============== RESTART: /home/walters/src/class2/week4/part2.py ===============
+These values match CC regular express and will be passed to checksum validate
+['37562198673', '4111 1111 1111', '5431 1111 1111', '43711 1111 1111']
+
+Invalid credit card number found: 37562198673
+Valid credit card number found: 4111 1111 1111
+Invalid credit card number found: 5431 1111 1111
+Valid credit card number found: 43711 1111 1111
+>>> 
+======== RESTART: /home/walters/src/class2/week4/ServerSocketFileXfer.py =======
+[*] Listening as :5001
+[+] ('127.0.0.1', 43190) is connected.
+
