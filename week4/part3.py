@@ -30,18 +30,8 @@ def unpickle_it(filename='team_data.pkl'):
         print(f"Error unpickling dictionary: {e}")
         return None
 def move_pickle():
+    print( "team_data.pkl  moved to client directory" )
     Path("team_data.pkl").rename("client/team_data.pkl")
-    
-
-
-#pickle_dictionary(team_data , 'team_data.pkl')
-
-#input('continue after transfer')
-
-#loaded_teams = unpickle_dictionary('team_data.pkl')
-#if loaded_teams:
-#    print("Unpickled dictionary:")
-#    print(loaded_teams)
 
 
 
