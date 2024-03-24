@@ -7,7 +7,7 @@ class MMedia_Processing:  #1
     def ImgProc(self, image_path): #2
         try:
             
-            my_img = mpimg.imread(image_path) #3 #5
+            my_img = mpimg.imread(image_path) #5
 
             plt.figure(1) #9
             
@@ -18,13 +18,13 @@ class MMedia_Processing:  #1
             plt.imshow(lum_img)   #8 #9
             plt.title("Title : using img[:, :, 1]") #8 
             
-            #extra credit 
+            #extra  
             plt.figure(3)
             red_component = my_img[:, :, 0]
             red_image = np.zeros_like(my_img)
             red_image[:, :, 0] = red_component
             plt.imshow(red_image)
-            plt.title('Extra Credit')
+            plt.title('Extra')
             plt.axis('off')  # Turn off axis
 
             plt.figure(4) #9
@@ -37,7 +37,6 @@ class MMedia_Processing:  #1
             plt.title("Histogram") #10
             plt.xlabel("Luminance") #10
             plt.ylabel("Frequency") #10
-            #plt.show()
 
         except FileNotFoundError:
             print(f"Error: Image file '{image_path}' not found.")
@@ -45,13 +44,10 @@ class MMedia_Processing:  #1
     def AudProc(self,audio_path): #2
         Fs, data = read(audio_path) #13
         plt.figure(5) #9
-        # Plot the waveform
-        #plt.figure(figsize=(10, 6))
         plt.plot(data) #14
         plt.title("Waveform of Test Audio") #14
         plt.xlabel("Sample Index") #14
         plt.ylabel("Amplitude") #14
-        #plt.grid(True)
         plt.show()
 
         # Flip the data to play the track backwards
@@ -64,9 +60,9 @@ class MMedia_Processing:  #1
 
         
 if __name__ == "__main__":
-    image_file_path = "BigDataImage-1.jpg"  
-    audio_file_path ='Alone-Sistar.wav'
+    image_file_path = "BigDataImage-1.jpg"  #3 
+    audio_file_path ='Alone-Sistar.wav' #11
     media_processor = MMedia_Processing()
-    media_processor.ImgProc(image_file_path)
-    media_processor.AudProc(audio_file_path)
+    media_processor.ImgProc(image_file_path) #3
+    media_processor.AudProc(audio_file_path) #11
 
